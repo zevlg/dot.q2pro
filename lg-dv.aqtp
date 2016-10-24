@@ -1,0 +1,149 @@
+echo "-------------------------------------"
+echo "        AQPT config for lg "
+echo "-------------------------------------"
+
+//set allowoverflow 1
+//exec lg.cfg
+exec lg-dv.cfg
+
+// - [ Video settings] -
+set allowoverflow 1
+set vid_gamma 0.4
+set gl_brightness 0.15
+set gl_saturation 0.75
+set gl_modulate 1.75
+set gl_anisotropy 2
+set intensity 1.25
+
+name lg
+//Action Quake2 Keys
+
+alias sens25 "set sens1 2.5;set sens2 1.75; set sens4 1.0;sensitivity $sens1;bind f4 sens30; echo SENS 2.5"
+alias sens30 "set sens1 3.0;set sens2 2.2; set sens4 1.5;sensitivity $sens1;bind f4 sens25; echo SENS 3.0"
+bind f4 sens25
+
+sens25
+alias snip2x "weapon;sensitivity $sens2;bind space snip4x;echo sniper 2X"
+alias snip4x "weapon;sensitivity $sens4;bind space snipreset;echo sniper 4X"
+alias snipreset "weapon;wait;weapon;sensitivity $sens1;bind space snip2x; echo sniper RESET"
+bind space snip2x
+
+bind j "sensitivity $sens1; bind space snip2x; echo sniper RESET"
+
+// FOV adjustment
+alias afov afov1
+alias afov1 "cl_adjustfov 1; echo [FOV] 16:9; alias afov afov0"
+alias afov0 "cl_adjustfov 0; echo [FOV] 4:3; alias afov afov1"
+bind f2 "afov"
+
+// - [ Weapon keys ] -
+alias nexthand hand2enable
+alias hand2enable "hand 2;echo [HAND] 2;alias nexthand hand3enable"
+alias hand3enable "hand 3;echo [HAND] 3;alias nexthand hand2enable"
+bind f5 "nexthand"
+
+set hand 3
+set cl_gun 1
+bind i "bandage;wait;say_team Bandaging HP=[%H%]"
+bind semicolon "opendoor"
+bind ' "use Blaster; use A 2nd Pistol"
+bind a "use Combat Knife"	//uses knife
+bind , "use special"		//uses special weapon
+bind p "reload"
+bind k "use grenades"
+bind x "use grenades"
+bind y "weapon"
+
+bind tab "inven"
+
+//--[ sky toggle ]
+alias skytoggle stars
+alias stars "sky stars;echo [SKY] stars; alias skytoggle cliff"
+alias cliff "sky cliff;echo [SKY] cliff; alias skytoggle bluesky"
+alias bluesky "sky bluesky;echo [SKY] bluesky; alias skytoggle stars"
+bind F3 "skytoggle"
+
+// Inventory 
+bind [ 		"invprev"
+bind ] 		"invnext"
+bind BACKSPACE 	"use Blaster;drop weapon"
+bind 2 		"use Blaster;drop weapon"
+//bind TAB 	"cmd help"
+bind ENTER	"invuse"
+bind 3 		"drop item"
+bind 4          "use Blaster;drop weapon"
+bind \          "drop item"
+bind 0 		"drop bandolier"
+
+// Communication
+bind mwheelup   "radio go"
+bind mwheeldown "radio enemyd"
+#bind mouse5	"radio taking_f"	// Taking Fire
+#bind mouse4	"radio im_hit"		// I'm Hit!
+
+bind mouse4     "radio go;wave 4;echo WAVE4"
+bind mouse5     "wave 1;echo WAVE1"
+bind mouse6     "radio enemyd;wave 1"
+
+//say directions
+bind KP_UPARROW 	"radio forward"
+bind KP_DOWNARROW	"radio back"
+bind KP_LEFTARROW	"radio left"
+bind KP_RIGHTARROW	"radio right"
+bind KP_HOME		"radio up"
+bind KP_PGUP		"radio down"
+
+// Scaling
+seta ui_scale "4"
+seta scr_scale "3"
+seta con_scale "4"
+set con_clock "1"
+
+// crosshair
+seta ch_alpha "1"
+seta ch_blue "0"
+seta ch_green "1"
+seta ch_scale "0.7"
+
+alias nextch chgreen
+alias chgreen "ch_blue 0; ch_green 1; ch_red 0; echo [CROSSHAIR] green;alias nextch chwhite"
+alias chwhite "ch_blue 1; ch_green 1; ch_red 1; echo [CROSSHAIR] white;alias nextch chyellow"
+alias chyellow "ch_blue 0; ch_green 1; ch_red 1; echo [CROSSHAIR] yellow;alias nextch chblack"
+alias chblack "ch_blue 0; ch_green 0; ch_red 0; echo [CHROSSHAIR] black; alias nextch chgreen"
+bind f6 "nextch"
+
+// sound
+seta s_khz "44"
+seta s_mixahead "0.1"
+
+//say certain situational appropriate messages
+
+//Server settings
+set cl_predict 	"1"
+set cl_protocol 34
+alias ghost  "connect ghost92.dyndns.org"
+alias ghost1 "connect 37.146.229.234"
+alias ghost2 "connect 37.146.216.56"
+alias ghost3 "connect 37.146.230.91"
+alias ghost4 "connect 128.68.76.113"
+alias ghost5 "connect 95.27.224.26"
+alias fin20  "connect games1.pelitutka.fi:27920"
+alias fin10  "connect games1.pelitutka.fi:27910"
+alias vir20  "connect aq2.virasto.com:27920"
+alias zevlg  "connect zevlg1.asuscomm.com"
+
+set hostname "-= LGHOME AQTP TNG =-"
+set rcon_password "1"
+
+set bholelimit 0
+set splatlimit 0
+set shelloff 0
+
+// 2 grenades in bandolier
+set tgren 2
+// use infra red with bandolier
+set ir 1
+
+set dmflags 1056997376
+
+set teamplay 1
