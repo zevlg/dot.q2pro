@@ -116,6 +116,12 @@ bind f6 "nextch"
 seta s_khz "44"
 seta s_mixahead "0.1"
 
+// show fps
+alias drawfps "draw cl_fps -1 -1; alias showfps undrawfps"
+alias undrawfps "undraw cl_fps; alias showfps drawfps"
+alias showfps drawfps
+bind f7 showfps
+
 //say certain situational appropriate messages
 
 //Server settings
