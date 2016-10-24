@@ -78,8 +78,8 @@ bind 0 		"drop bandolier"
 // Communication
 bind mwheelup   "radio go"
 bind mwheeldown "radio enemyd"
-#bind mouse5	"radio taking_f"	// Taking Fire
-#bind mouse4	"radio im_hit"		// I'm Hit!
+//bind mouse5	"radio taking_f"	// Taking Fire
+//bind mouse4	"radio im_hit"		// I'm Hit!
 
 bind mouse4     "radio go;wave 4;echo WAVE4"
 bind mouse5     "wave 1;echo WAVE1"
