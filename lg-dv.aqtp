@@ -23,12 +23,12 @@ alias sens30 "set sens1 3.0;set sens2 2.2; set sens4 1.5;sensitivity $sens1;bind
 bind f4 sens25
 
 sens25
-alias snip2x "weapon;sensitivity $sens2;bind space snip4x;echo sniper 2X"
-alias snip4x "weapon;sensitivity $sens4;bind space snipreset;echo sniper 4X"
-alias snipreset "weapon;wait;weapon;sensitivity $sens1;bind space snip2x; echo sniper RESET"
+alias snip2x "lens 2;sensitivity $sens2;bind space snip4x;echo sniper 2X"
+alias snip4x "lens 4;sensitivity $sens4;bind space snipreset;echo sniper 4X"
+alias snipreset "lens 1;sensitivity $sens1;bind space snip2x; echo sniper RESET"
 bind space snip2x
 
-bind j "sensitivity $sens1; bind space snip2x; echo sniper RESET"
+bind j snipreset
 
 // FOV adjustment
 alias afov afov1
@@ -133,6 +133,7 @@ alias ghost2 "connect 37.146.216.56"
 alias ghost3 "connect 37.146.230.91"
 alias ghost4 "connect 128.68.76.113"
 alias ghost5 "connect 95.27.224.26"
+alias ghost6 "connect 172.16.3.100"
 alias fin20  "connect games1.pelitutka.fi:27920"
 alias fin10  "connect games1.pelitutka.fi:27910"
 alias vir20  "connect aq2.virasto.com:27920"
