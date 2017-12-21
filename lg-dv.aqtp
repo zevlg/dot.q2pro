@@ -154,3 +154,4 @@ set ir 1
 set dmflags 1056997376
 
 set teamplay 1
+set sv_mvd_enable 1
