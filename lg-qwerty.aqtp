@@ -13,7 +13,15 @@ set gl_brightness 0.15
 set gl_saturation 0.75
 set gl_modulate 1.75
 set gl_anisotropy 2
+set gl_swapinterval 1
 set intensity 1.25
+
+alias lg_lightning1 "gl_modulate 1.2; intensity 1; bind f7 lg_lightning2"
+alias lg_lightning2 "gl_modulate 1.5; intensity 1.25; bind f7 lg_lightning3"
+alias lg_lightning3 "gl_modulate 1.75; intensity 1.25; bind f7 lg_lightning4"
+alias lg_lightning4 "gl_modulate 1.75; intensity 1.5; bind f7 lg_lightning5"
+alias lg_lightning5 "gl_modulate 1.75; intensity 2; bind f7 lg_lightning1"
+bind f7 "lg_lightning1"
 
 name lg
 //Action Quake2 Keys
@@ -28,7 +36,7 @@ alias snip4x "lens 4;sensitivity $sens4;bind space snipreset;echo sniper 4X"
 alias snipreset "lens 1;sensitivity $sens1;bind space snip2x; echo sniper RESET"
 bind space snip2x
 
-bind j snipreset
+bind c snipreset
 
 // FOV adjustment
 alias afov afov1
@@ -106,10 +114,10 @@ seta ch_green "1"
 seta ch_scale "0.7"
 
 alias nextch chgreen
-alias chgreen "ch_blue 0; ch_green 1; ch_red 0; echo [CROSSHAIR] green;alias nextch chwhite"
+alias chgreen "ch_scale 0.7; ch_blue 0; ch_green 1; ch_red 0; echo [CROSSHAIR] green;alias nextch chwhite"
 alias chwhite "ch_blue 1; ch_green 1; ch_red 1; echo [CROSSHAIR] white;alias nextch chyellow"
-alias chyellow "ch_blue 0; ch_green 1; ch_red 1; echo [CROSSHAIR] yellow;alias nextch chblack"
-alias chblack "ch_blue 0; ch_green 0; ch_red 0; echo [CHROSSHAIR] black; alias nextch chgreen"
+alias chyellow "ch_blue 0; ch_green 1; ch_red 1; echo [CROSSHAIR] yellow;alias nextch chred"
+alias chred "ch_scale 1; ch_blue 0; ch_green 0; ch_red 1; echo [CHROSSHAIR] red; alias nextch chgreen"
 bind f6 "nextch"
 
 // sound

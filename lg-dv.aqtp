@@ -13,6 +13,7 @@ set gl_brightness 0.15
 set gl_saturation 0.75
 set gl_modulate 1.75
 set gl_anisotropy 2
+set gl_swapinterval 1
 set intensity 1.25
 
 name lg
@@ -108,8 +109,8 @@ seta ch_scale "0.7"
 alias nextch chgreen
 alias chgreen "ch_blue 0; ch_green 1; ch_red 0; echo [CROSSHAIR] green;alias nextch chwhite"
 alias chwhite "ch_blue 1; ch_green 1; ch_red 1; echo [CROSSHAIR] white;alias nextch chyellow"
-alias chyellow "ch_blue 0; ch_green 1; ch_red 1; echo [CROSSHAIR] yellow;alias nextch chblack"
-alias chblack "ch_blue 0; ch_green 0; ch_red 0; echo [CHROSSHAIR] black; alias nextch chgreen"
+alias chyellow "ch_blue 0; ch_green 1; ch_red 1; echo [CROSSHAIR] yellow;alias nextch chred"
+alias chred "ch_blue 0; ch_green 0; ch_red 0; echo [CHROSSHAIR] red; alias nextch chgreen"
 bind f6 "nextch"
 
 // sound
