@@ -8,19 +8,18 @@ exec lg-qwerty.cfg
 
 // - [ Video settings] -
 set allowoverflow 1
-set vid_gamma 0.4
-set gl_brightness 0.15
-set gl_saturation 0.75
-set gl_modulate 1.75
+set vid_gamma 0.25
+set gl_shaders 0
+set gl_brightness 1
+set gl_saturation 1
+set gl_modulate 2
 set gl_anisotropy 2
 set gl_swapinterval 1
 set intensity 1.25
 
-alias lg_lightning1 "gl_modulate 1.2; intensity 1; bind f7 lg_lightning2"
-alias lg_lightning2 "gl_modulate 1.5; intensity 1.25; bind f7 lg_lightning3"
-alias lg_lightning3 "gl_modulate 1.75; intensity 1.25; bind f7 lg_lightning4"
-alias lg_lightning4 "gl_modulate 1.75; intensity 1.5; bind f7 lg_lightning5"
-alias lg_lightning5 "gl_modulate 1.75; intensity 2; bind f7 lg_lightning1"
+alias lg_lightning1 "vid_gamma 0.3; bind f7 lg_lightning2"
+alias lg_lightning2 "vid_gamma 0.2; bind f7 lg_lightning3"
+alias lg_lightning3 "vid_gamma 0.25; bind f7 lg_lightning1"
 bind f7 "lg_lightning1"
 
 name lg
@@ -140,6 +139,7 @@ alias fin20  "connect games1.pelitutka.fi:27920"
 alias fin10  "connect games1.pelitutka.fi:27910"
 alias vir20  "connect aq2.virasto.com:27920"
 alias zevlg  "connect zevlg1.asuscomm.com"
+alias zumb1  "connect 23.105.225.206"
 
 set hostname "-= LGHOME AQTP TNG =-"
 set rcon_password "1"
