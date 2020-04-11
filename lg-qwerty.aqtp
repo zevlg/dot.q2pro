@@ -8,7 +8,7 @@ exec lg-qwerty.cfg
 
 // - [ Video settings] -
 set allowoverflow 1
-set vid_gamma 0.25
+set vid_gamma 0.35
 set gl_shaders 0
 set gl_brightness 1
 set gl_saturation 1
