@@ -30,8 +30,9 @@ alias sens30 "set sens1 3.0;set sens2 2.2; set sens4 1.5;sensitivity $sens1;bind
 bind f4 sens25
 
 sens25
-alias snip2x "lens 2;sensitivity $sens2;bind space snip4x;echo sniper 2X"
-alias snip4x "lens 4;sensitivity $sens4;bind space snipreset;echo sniper 4X"
+//alias snip2x "lens 2;sensitivity $sens2;bind space snip4x;echo sniper 2X"
+//alias snip4x "lens 4;sensitivity $sens4;bind space snipreset;echo sniper 4X"
+alias snip2x "lens 2;sensitivity $sens2;bind space snipreset;echo sniper 2X"
 alias snipreset "lens 1;sensitivity $sens1;bind space snip2x; echo sniper RESET"
 bind space snip2x
 
