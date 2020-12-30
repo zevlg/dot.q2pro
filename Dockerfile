@@ -1,4 +1,4 @@
-# mkdir q2 && copy -Rp /path/to/baseq2 q2 && copy -Rp /path/to/action q2
+# mkdir q2 && cp -Rp /path/to/baseq2 q2 && cp -Rp /path/to/action q2
 # docker build -f ~/github/dot.q2pro/Dockerfile q2
 # docker run -it -p 27910:27910/udp <image>
 

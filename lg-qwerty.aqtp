@@ -61,6 +61,8 @@ bind r "reload"
 bind v "use grenades"
 bind b "use grenades"
 bind t "weapon"
+bind x
+bind i "irvision"
 
 bind tab "inven"
 
@@ -75,6 +77,7 @@ bind F3 "skytoggle"
 bind [ 		"invprev"
 bind ] 		"invnext"
 bind BACKSPACE 	"use Blaster;drop weapon"
+bind 1 		"use Blaster;drop weapon"
 bind 2 		"use Blaster;drop weapon"
 //bind TAB 	"cmd help"
 bind ENTER	"invuse"
@@ -84,8 +87,8 @@ bind \          "drop item"
 bind 0 		"drop bandolier"
 
 // Communication
-bind mwheelup   "radio go"
-bind mwheeldown "radio enemyd"
+bind mwheelup   "say_team Enemy [%E] at %S"
+bind mwheeldown "radio enemyd; wave 1; say_team killed [%K] at %S"
 //bind mouse5	"radio taking_f"	// Taking Fire
 //bind mouse4	"radio im_hit"		// I'm Hit!
 
@@ -109,9 +112,10 @@ set con_clock "1"
 
 // crosshair
 seta ch_alpha "1"
+seta ch_red "1"
+seta ch_green "0"
 seta ch_blue "0"
-seta ch_green "1"
-seta ch_scale "0.7"
+seta ch_scale "1"
 
 alias nextch chgreen
 alias chgreen "ch_scale 0.7; ch_blue 0; ch_green 1; ch_red 0; echo [CROSSHAIR] green;alias nextch chwhite"
@@ -138,9 +142,12 @@ alias ghost5 "connect 95.27.224.26"
 alias ghost6 "connect 172.16.3.100"
 alias fin20  "connect games1.pelitutka.fi:27920"
 alias fin10  "connect games1.pelitutka.fi:27910"
+alias fintp1 "connect 149.210.173.39"
 alias vir20  "connect aq2.virasto.com:27920"
 alias zevlg  "connect zevlg1.asuscomm.com"
 alias zumb1  "connect 23.105.225.206"
+alias artem  "connect 79.137.153.235"
+alias artemk1 "connect artemk1.mykeenetic.ru"
 
 set hostname "-= LGHOME AQTP TNG =-"
 set rcon_password "1"
