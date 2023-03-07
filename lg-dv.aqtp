@@ -54,6 +54,7 @@ bind p "reload"
 bind k "use grenades"
 bind x "use grenades"
 bind y "weapon"
+bind c "irvision"
 
 bind tab "inven"
 
@@ -127,7 +128,9 @@ bind f7 showfps
 
 //Server settings
 set cl_predict 	"1"
-set cl_protocol 34
+set cl_protocol 0
+set cl_packetdup 2
+
 alias ghost  "connect ghost92.dyndns.org"
 alias ghost1 "connect 37.146.229.234"
 alias ghost2 "connect 37.146.216.56"

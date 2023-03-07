@@ -24,10 +24,10 @@ bind f7 "lg_lightning1"
 
 name lg
 //Action Quake2 Keys
-
+alias sens20 "set sens1 2.0;set sens2 1.3; set sens4 0.6;sensitivity $sens1;bind f4 sens25; echo SENS 2.0"
 alias sens25 "set sens1 2.5;set sens2 1.75; set sens4 1.0;sensitivity $sens1;bind f4 sens30; echo SENS 2.5"
-alias sens30 "set sens1 3.0;set sens2 2.2; set sens4 1.5;sensitivity $sens1;bind f4 sens25; echo SENS 3.0"
-bind f4 sens25
+alias sens30 "set sens1 3.0;set sens2 2.2; set sens4 1.5;sensitivity $sens1;bind f4 sens20; echo SENS 3.0"
+bind f4 sens30
 
 sens25
 //alias snip2x "lens 2;sensitivity $sens2;bind space snip4x;echo sniper 2X"
@@ -68,10 +68,16 @@ bind tab "inven"
 
 //--[ sky toggle ]
 alias skytoggle stars
-alias stars "sky stars;echo [SKY] stars; alias skytoggle cliff"
+alias stars "gl_modulate_world 0.2;sky stars;echo [SKY] stars; alias skytoggle cliff"
 alias cliff "sky cliff;echo [SKY] cliff; alias skytoggle bluesky"
-alias bluesky "sky bluesky;echo [SKY] bluesky; alias skytoggle stars"
+alias bluesky "gl_modulate_world 1;sky bluesky;echo [SKY] bluesky; alias skytoggle stars"
 bind F3 "skytoggle"
+
+//--[show lags graph]
+alias lags_on "scr_lag_draw 1; bind f9 lags_off; echo [LAG ON] $cl_lag"
+alias lags_off "scr_lag_draw 0; bind f9 lags_on; echo [LAG OFF] $cl_lag"
+bind f9 "lags_off"
+set scr_lag_draw 1
 
 // Inventory 
 bind [ 		"invprev"
@@ -132,7 +138,14 @@ seta s_mixahead "0.1"
 
 //Server settings
 set cl_predict 	"1"
-set cl_protocol 34
+
+// 0 — automatically select the highest protocol version supported
+// 34 — use default Quake 2 protocol
+// 35 — use enhanced R1Q2 protocol
+// 36 — use enhanced Q2PRO protocol
+set cl_protocol 0
+set cl_packetdup 2
+
 alias ghost  "connect ghost92.dyndns.org"
 alias ghost1 "connect 37.146.229.234"
 alias ghost2 "connect 37.146.216.56"
@@ -146,8 +159,11 @@ alias fintp1 "connect 149.210.173.39"
 alias vir20  "connect aq2.virasto.com:27920"
 alias zevlg  "connect zevlg1.asuscomm.com"
 alias zumb1  "connect 23.105.225.206"
-alias artem  "connect 79.137.153.235"
-alias artemk1 "connect artemk1.mykeenetic.ru"
+//alias artem  "connect 79.137.153.235"
+//alias artemk1 "connect artemk1.mykeenetic.ru"
+alias artemk "connect artemk.keenetic.name"
+alias artemk2 "connect 213.87.161.219"
+alias lg2 "connect 95.28.220.254"
 
 set hostname "-= LGHOME AQTP TNG =-"
 set rcon_password "1"
